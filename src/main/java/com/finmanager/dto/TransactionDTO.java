@@ -1,7 +1,5 @@
 package com.finmanager.dto;
 
-import com.finmanager.entities.TransactionType;
-
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -10,83 +8,94 @@ import java.time.LocalDateTime;
  */
 public class TransactionDTO {
 
-    private Long id;
-    private TransactionType type;
-    private BigDecimal amount;
-    private LocalDateTime date;
-    private String description;
-    private Long accountId;
+    private String numTransac;
+    private String typeTransac;
+    private LocalDateTime dateTransac;
+    private BigDecimal montantTransac;
+    private String statutTransac;
+    private String numCompte;
+    private Long idNotification;
 
     public TransactionDTO() {
     }
 
-    public TransactionDTO(Long id, TransactionType type, BigDecimal amount, LocalDateTime date, String description, Long accountId) {
+    public TransactionDTO(String numTransac, String typeTransac, LocalDateTime dateTransac, BigDecimal montantTransac, String statutTransac, String numCompte, Long idNotification) {
         this();
-        this.id = id;
-        this.type = type;
-        this.amount = amount;
-        this.date = date;
-        this.description = description;
-        this.accountId = accountId;
+        this.numTransac = numTransac;
+        this.typeTransac = typeTransac;
+        this.dateTransac = dateTransac;
+        this.montantTransac = montantTransac;
+        this.statutTransac = statutTransac;
+        this.numCompte = numCompte;
+        this.idNotification = idNotification;
     }
 
-    public Long getId() {
-        return id;
+    public String getNumTransac() {
+        return numTransac;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setNumTransac(String numTransac) {
+        this.numTransac = numTransac;
     }
 
-    public TransactionType getType() {
-        return type;
+    public String getTypeTransac() {
+        return typeTransac;
     }
 
-    public void setType(TransactionType type) {
-        this.type = type;
+    public void setTypeTransac(String typeTransac) {
+        this.typeTransac = typeTransac;
     }
 
-    public BigDecimal getAmount() {
-        return amount;
+    public LocalDateTime getDateTransac() {
+        return dateTransac;
     }
 
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
+    public void setDateTransac(LocalDateTime dateTransac) {
+        this.dateTransac = dateTransac;
     }
 
-    public LocalDateTime getDate() {
-        return date;
+    public BigDecimal getMontantTransac() {
+        return montantTransac;
     }
 
-    public void setDate(LocalDateTime date) {
-        this.date = date;
+    public void setMontantTransac(BigDecimal montantTransac) {
+        this.montantTransac = montantTransac;
     }
 
-    public String getDescription() {
-        return description;
+    public String getStatutTransac() {
+        return statutTransac;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setStatutTransac(String statutTransac) {
+        this.statutTransac = statutTransac;
     }
 
-    public Long getAccountId() {
-        return accountId;
+    public String getNumCompte() {
+        return numCompte;
     }
 
-    public void setAccountId(Long accountId) {
-        this.accountId = accountId;
+    public void setNumCompte(String numCompte) {
+        this.numCompte = numCompte;
+    }
+
+    public Long getIdNotification() {
+        return idNotification;
+    }
+
+    public void setIdNotification(Long idNotification) {
+        this.idNotification = idNotification;
     }
 
     @Override
     public String toString() {
         return "TransactionDTO{" +
-                "id=" + id +
-                ", type=" + type +
-                ", amount=" + amount +
-                ", date=" + date +
-                ", description=" + description +
-                ", accountId=" + accountId +
+                "numTransac=" + numTransac +
+                ", typeTransac=" + typeTransac +
+                ", dateTransac=" + dateTransac +
+                ", montantTransac=" + montantTransac +
+                ", statutTransac=" + statutTransac +
+                ", numCompte=" + numCompte +
+                ", idNotification=" + idNotification +
                 "}";
     }
 }

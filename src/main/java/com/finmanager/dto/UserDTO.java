@@ -1,6 +1,6 @@
 package com.finmanager.dto;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,50 +9,56 @@ import java.util.List;
  */
 public class UserDTO {
 
-    private Long id;
-    private String firstName;
-    private String lastName;
+    private Long idUser;
+    private String nomUser;
+    private String prenomUser;
     private String email;
     private String phone;
-    private LocalDateTime createdAt;
-    private List<Long> roleIds;
+    private LocalDate dateN;
+    private String sexe;
+    private String profession;
+    private List<String> numComptes;
+    private List<Long> idRoles;
 
     public UserDTO() {
-        this.roleIds = new ArrayList<>();
+        this.numComptes = new ArrayList<>();
+        this.idRoles = new ArrayList<>();
     }
 
-    public UserDTO(Long id, String firstName, String lastName, String email, String phone, LocalDateTime createdAt) {
+    public UserDTO(Long idUser, String nomUser, String prenomUser, String email, String phone, LocalDate dateN, String sexe, String profession) {
         this();
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.idUser = idUser;
+        this.nomUser = nomUser;
+        this.prenomUser = prenomUser;
         this.email = email;
         this.phone = phone;
-        this.createdAt = createdAt;
+        this.dateN = dateN;
+        this.sexe = sexe;
+        this.profession = profession;
     }
 
-    public Long getId() {
-        return id;
+    public Long getIdUser() {
+        return idUser;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdUser(Long idUser) {
+        this.idUser = idUser;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getNomUser() {
+        return nomUser;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setNomUser(String nomUser) {
+        this.nomUser = nomUser;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getPrenomUser() {
+        return prenomUser;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setPrenomUser(String prenomUser) {
+        this.prenomUser = prenomUser;
     }
 
     public String getEmail() {
@@ -71,32 +77,59 @@ public class UserDTO {
         this.phone = phone;
     }
 
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
+    public LocalDate getDateN() {
+        return dateN;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
+    public void setDateN(LocalDate dateN) {
+        this.dateN = dateN;
     }
 
-    public List<Long> getRoleIds() {
-        return roleIds;
+    public String getSexe() {
+        return sexe;
     }
 
-    public void setRoleIds(List<Long> roleIds) {
-        this.roleIds = roleIds;
+    public void setSexe(String sexe) {
+        this.sexe = sexe;
+    }
+
+    public String getProfession() {
+        return profession;
+    }
+
+    public void setProfession(String profession) {
+        this.profession = profession;
+    }
+
+    public List<String> getNumComptes() {
+        return numComptes;
+    }
+
+    public void setNumComptes(List<String> numComptes) {
+        this.numComptes = numComptes;
+    }
+
+    public List<Long> getIdRoles() {
+        return idRoles;
+    }
+
+    public void setIdRoles(List<Long> idRoles) {
+        this.idRoles = idRoles;
     }
 
     @Override
     public String toString() {
         return "UserDTO{" +
-                "id=" + id +
-                ", firstName=" + firstName +
-                ", lastName=" + lastName +
+                "idUser=" + idUser +
+                ", nomUser=" + nomUser +
+                ", prenomUser=" + prenomUser +
                 ", email=" + email +
                 ", phone=" + phone +
-                ", createdAt=" + createdAt +
-                ", roleIds=" + roleIds +
+                ", dateN=" + dateN +
+                ", sexe=" + sexe +
+                ", profession=" + profession +
+                ", numComptes=" + numComptes +
+                ", idRoles=" + idRoles +
                 "}";
     }
 }

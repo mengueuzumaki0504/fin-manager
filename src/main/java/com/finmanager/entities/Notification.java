@@ -3,74 +3,74 @@ package com.finmanager.entities;
 import java.time.LocalDateTime;
 
 /**
- * Message envoyé à un utilisateur.
+ * Notification liée à une transaction (table Notifications).
  */
 public class Notification {
 
-    private Long id;
-    private String message;
-    private LocalDateTime createdAt;
-    private boolean read;
-    private User user;
+    private Long idNotification;
+    private String typeNot;
+    private String contenuNot;
+    private LocalDateTime dateNot;
+    private Transaction transaction;
 
     public Notification() {
     }
 
-    public Notification(Long id, String message, LocalDateTime createdAt, boolean read) {
+    public Notification(Long idNotification, String typeNot, String contenuNot, LocalDateTime dateNot) {
         this();
-        this.id = id;
-        this.message = message;
-        this.createdAt = createdAt;
-        this.read = read;
+        this.idNotification = idNotification;
+        this.typeNot = typeNot;
+        this.contenuNot = contenuNot;
+        this.dateNot = dateNot;
     }
 
-    public Long getId() {
-        return id;
+    public Long getIdNotification() {
+        return idNotification;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdNotification(Long idNotification) {
+        this.idNotification = idNotification;
     }
 
-    public String getMessage() {
-        return message;
+    public String getTypeNot() {
+        return typeNot;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setTypeNot(String typeNot) {
+        this.typeNot = typeNot;
     }
 
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
+    public String getContenuNot() {
+        return contenuNot;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
+    public void setContenuNot(String contenuNot) {
+        this.contenuNot = contenuNot;
     }
 
-    public boolean isRead() {
-        return read;
+    public LocalDateTime getDateNot() {
+        return dateNot;
     }
 
-    public void setRead(boolean read) {
-        this.read = read;
+    public void setDateNot(LocalDateTime dateNot) {
+        this.dateNot = dateNot;
     }
 
-    public User getUser() {
-        return user;
+    public Transaction getTransaction() {
+        return transaction;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setTransaction(Transaction transaction) {
+        this.transaction = transaction;
     }
 
     @Override
     public String toString() {
         return "Notification{" +
-                "id=" + id +
-                ", message=" + message +
-                ", createdAt=" + createdAt +
-                ", read=" + read +
+                "idNotification=" + idNotification +
+                ", typeNot=" + typeNot +
+                ", contenuNot=" + contenuNot +
+                ", dateNot=" + dateNot +
                 "}";
     }
 }

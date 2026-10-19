@@ -1,66 +1,64 @@
 package com.finmanager.entities;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Utilisateur de l'application (client ou employé).
+ * Utilisateur de l'application (table User).
  */
 public class User {
 
-    private Long id;
-    private String firstName;
-    private String lastName;
+    private Long idUser;
+    private String nomUser;
+    private String prenomUser;
     private String email;
-    private String password;
     private String phone;
-    private LocalDateTime createdAt;
+    private LocalDate dateN;
+    private String sexe;
+    private String profession;
+    private List<Compte> comptes;
     private List<Role> roles;
-    private List<Account> accounts;
-    private List<Loan> loans;
-    private List<Notification> notifications;
 
     public User() {
+        this.comptes = new ArrayList<>();
         this.roles = new ArrayList<>();
-        this.accounts = new ArrayList<>();
-        this.loans = new ArrayList<>();
-        this.notifications = new ArrayList<>();
     }
 
-    public User(Long id, String firstName, String lastName, String email, String password, String phone, LocalDateTime createdAt) {
+    public User(Long idUser, String nomUser, String prenomUser, String email, String phone, LocalDate dateN, String sexe, String profession) {
         this();
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.idUser = idUser;
+        this.nomUser = nomUser;
+        this.prenomUser = prenomUser;
         this.email = email;
-        this.password = password;
         this.phone = phone;
-        this.createdAt = createdAt;
+        this.dateN = dateN;
+        this.sexe = sexe;
+        this.profession = profession;
     }
 
-    public Long getId() {
-        return id;
+    public Long getIdUser() {
+        return idUser;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdUser(Long idUser) {
+        this.idUser = idUser;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getNomUser() {
+        return nomUser;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setNomUser(String nomUser) {
+        this.nomUser = nomUser;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getPrenomUser() {
+        return prenomUser;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setPrenomUser(String prenomUser) {
+        this.prenomUser = prenomUser;
     }
 
     public String getEmail() {
@@ -71,14 +69,6 @@ public class User {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public String getPhone() {
         return phone;
     }
@@ -87,12 +77,36 @@ public class User {
         this.phone = phone;
     }
 
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
+    public LocalDate getDateN() {
+        return dateN;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
+    public void setDateN(LocalDate dateN) {
+        this.dateN = dateN;
+    }
+
+    public String getSexe() {
+        return sexe;
+    }
+
+    public void setSexe(String sexe) {
+        this.sexe = sexe;
+    }
+
+    public String getProfession() {
+        return profession;
+    }
+
+    public void setProfession(String profession) {
+        this.profession = profession;
+    }
+
+    public List<Compte> getComptes() {
+        return comptes;
+    }
+
+    public void setComptes(List<Compte> comptes) {
+        this.comptes = comptes;
     }
 
     public List<Role> getRoles() {
@@ -103,39 +117,17 @@ public class User {
         this.roles = roles;
     }
 
-    public List<Account> getAccounts() {
-        return accounts;
-    }
-
-    public void setAccounts(List<Account> accounts) {
-        this.accounts = accounts;
-    }
-
-    public List<Loan> getLoans() {
-        return loans;
-    }
-
-    public void setLoans(List<Loan> loans) {
-        this.loans = loans;
-    }
-
-    public List<Notification> getNotifications() {
-        return notifications;
-    }
-
-    public void setNotifications(List<Notification> notifications) {
-        this.notifications = notifications;
-    }
-
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", firstName=" + firstName +
-                ", lastName=" + lastName +
+                "idUser=" + idUser +
+                ", nomUser=" + nomUser +
+                ", prenomUser=" + prenomUser +
                 ", email=" + email +
                 ", phone=" + phone +
-                ", createdAt=" + createdAt +
+                ", dateN=" + dateN +
+                ", sexe=" + sexe +
+                ", profession=" + profession +
                 "}";
     }
 }

@@ -4,85 +4,94 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
- * Opération effectuée sur un compte (dépôt, retrait, virement).
+ * Opération effectuée sur un compte (table transaction).
  */
 public class Transaction {
 
-    private Long id;
-    private TransactionType type;
-    private BigDecimal amount;
-    private LocalDateTime date;
-    private String description;
-    private Account account;
+    private String numTransac;
+    private String typeTransac;
+    private LocalDateTime dateTransac;
+    private BigDecimal montantTransac;
+    private String statutTransac;
+    private Compte compte;
+    private Notification notification;
 
     public Transaction() {
     }
 
-    public Transaction(Long id, TransactionType type, BigDecimal amount, LocalDateTime date, String description) {
+    public Transaction(String numTransac, String typeTransac, LocalDateTime dateTransac, BigDecimal montantTransac, String statutTransac) {
         this();
-        this.id = id;
-        this.type = type;
-        this.amount = amount;
-        this.date = date;
-        this.description = description;
+        this.numTransac = numTransac;
+        this.typeTransac = typeTransac;
+        this.dateTransac = dateTransac;
+        this.montantTransac = montantTransac;
+        this.statutTransac = statutTransac;
     }
 
-    public Long getId() {
-        return id;
+    public String getNumTransac() {
+        return numTransac;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setNumTransac(String numTransac) {
+        this.numTransac = numTransac;
     }
 
-    public TransactionType getType() {
-        return type;
+    public String getTypeTransac() {
+        return typeTransac;
     }
 
-    public void setType(TransactionType type) {
-        this.type = type;
+    public void setTypeTransac(String typeTransac) {
+        this.typeTransac = typeTransac;
     }
 
-    public BigDecimal getAmount() {
-        return amount;
+    public LocalDateTime getDateTransac() {
+        return dateTransac;
     }
 
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
+    public void setDateTransac(LocalDateTime dateTransac) {
+        this.dateTransac = dateTransac;
     }
 
-    public LocalDateTime getDate() {
-        return date;
+    public BigDecimal getMontantTransac() {
+        return montantTransac;
     }
 
-    public void setDate(LocalDateTime date) {
-        this.date = date;
+    public void setMontantTransac(BigDecimal montantTransac) {
+        this.montantTransac = montantTransac;
     }
 
-    public String getDescription() {
-        return description;
+    public String getStatutTransac() {
+        return statutTransac;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setStatutTransac(String statutTransac) {
+        this.statutTransac = statutTransac;
     }
 
-    public Account getAccount() {
-        return account;
+    public Compte getCompte() {
+        return compte;
     }
 
-    public void setAccount(Account account) {
-        this.account = account;
+    public void setCompte(Compte compte) {
+        this.compte = compte;
+    }
+
+    public Notification getNotification() {
+        return notification;
+    }
+
+    public void setNotification(Notification notification) {
+        this.notification = notification;
     }
 
     @Override
     public String toString() {
         return "Transaction{" +
-                "id=" + id +
-                ", type=" + type +
-                ", amount=" + amount +
-                ", date=" + date +
-                ", description=" + description +
+                "numTransac=" + numTransac +
+                ", typeTransac=" + typeTransac +
+                ", dateTransac=" + dateTransac +
+                ", montantTransac=" + montantTransac +
+                ", statutTransac=" + statutTransac +
                 "}";
     }
 }

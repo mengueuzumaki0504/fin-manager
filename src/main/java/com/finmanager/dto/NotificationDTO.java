@@ -7,72 +7,72 @@ import java.time.LocalDateTime;
  */
 public class NotificationDTO {
 
-    private Long id;
-    private String message;
-    private LocalDateTime createdAt;
-    private boolean read;
-    private Long userId;
+    private Long idNotification;
+    private String typeNot;
+    private String contenuNot;
+    private LocalDateTime dateNot;
+    private String numTransac;
 
     public NotificationDTO() {
     }
 
-    public NotificationDTO(Long id, String message, LocalDateTime createdAt, boolean read, Long userId) {
+    public NotificationDTO(Long idNotification, String typeNot, String contenuNot, LocalDateTime dateNot, String numTransac) {
         this();
-        this.id = id;
-        this.message = message;
-        this.createdAt = createdAt;
-        this.read = read;
-        this.userId = userId;
+        this.idNotification = idNotification;
+        this.typeNot = typeNot;
+        this.contenuNot = contenuNot;
+        this.dateNot = dateNot;
+        this.numTransac = numTransac;
     }
 
-    public Long getId() {
-        return id;
+    public Long getIdNotification() {
+        return idNotification;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdNotification(Long idNotification) {
+        this.idNotification = idNotification;
     }
 
-    public String getMessage() {
-        return message;
+    public String getTypeNot() {
+        return typeNot;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setTypeNot(String typeNot) {
+        this.typeNot = typeNot;
     }
 
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
+    public String getContenuNot() {
+        return contenuNot;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
+    public void setContenuNot(String contenuNot) {
+        this.contenuNot = contenuNot;
     }
 
-    public boolean isRead() {
-        return read;
+    public LocalDateTime getDateNot() {
+        return dateNot;
     }
 
-    public void setRead(boolean read) {
-        this.read = read;
+    public void setDateNot(LocalDateTime dateNot) {
+        this.dateNot = dateNot;
     }
 
-    public Long getUserId() {
-        return userId;
+    public String getNumTransac() {
+        return numTransac;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setNumTransac(String numTransac) {
+        this.numTransac = numTransac;
     }
 
     @Override
     public String toString() {
         return "NotificationDTO{" +
-                "id=" + id +
-                ", message=" + message +
-                ", createdAt=" + createdAt +
-                ", read=" + read +
-                ", userId=" + userId +
+                "idNotification=" + idNotification +
+                ", typeNot=" + typeNot +
+                ", contenuNot=" + contenuNot +
+                ", dateNot=" + dateNot +
+                ", numTransac=" + numTransac +
                 "}";
     }
 }

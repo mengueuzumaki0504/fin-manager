@@ -1,54 +1,67 @@
 package com.finmanager.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * Droit d'accès accordé à un rôle (CREATE_ACCOUNT, APPROVE_LOAN, ...).
+ * Droit accordé à un ou plusieurs rôles (table permissions).
  */
 public class Permission {
 
-    private Long id;
-    private String name;
-    private String description;
+    private Long idPer;
+    private String nomPer;
+    private String descriptionP;
+    private List<Role> roles;
 
     public Permission() {
+        this.roles = new ArrayList<>();
     }
 
-    public Permission(Long id, String name, String description) {
+    public Permission(Long idPer, String nomPer, String descriptionP) {
         this();
-        this.id = id;
-        this.name = name;
-        this.description = description;
+        this.idPer = idPer;
+        this.nomPer = nomPer;
+        this.descriptionP = descriptionP;
     }
 
-    public Long getId() {
-        return id;
+    public Long getIdPer() {
+        return idPer;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdPer(Long idPer) {
+        this.idPer = idPer;
     }
 
-    public String getName() {
-        return name;
+    public String getNomPer() {
+        return nomPer;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNomPer(String nomPer) {
+        this.nomPer = nomPer;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDescriptionP() {
+        return descriptionP;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescriptionP(String descriptionP) {
+        this.descriptionP = descriptionP;
+    }
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
     }
 
     @Override
     public String toString() {
         return "Permission{" +
-                "id=" + id +
-                ", name=" + name +
-                ", description=" + description +
+                "idPer=" + idPer +
+                ", nomPer=" + nomPer +
+                ", descriptionP=" + descriptionP +
                 "}";
     }
 }

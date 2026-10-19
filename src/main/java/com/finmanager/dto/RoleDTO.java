@@ -8,50 +8,61 @@ import java.util.List;
  */
 public class RoleDTO {
 
-    private Long id;
-    private String name;
-    private List<Long> permissionIds;
+    private Long idRole;
+    private String nomRole;
+    private String description;
+    private List<Long> idPermissions;
 
     public RoleDTO() {
-        this.permissionIds = new ArrayList<>();
+        this.idPermissions = new ArrayList<>();
     }
 
-    public RoleDTO(Long id, String name) {
+    public RoleDTO(Long idRole, String nomRole, String description) {
         this();
-        this.id = id;
-        this.name = name;
+        this.idRole = idRole;
+        this.nomRole = nomRole;
+        this.description = description;
     }
 
-    public Long getId() {
-        return id;
+    public Long getIdRole() {
+        return idRole;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdRole(Long idRole) {
+        this.idRole = idRole;
     }
 
-    public String getName() {
-        return name;
+    public String getNomRole() {
+        return nomRole;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNomRole(String nomRole) {
+        this.nomRole = nomRole;
     }
 
-    public List<Long> getPermissionIds() {
-        return permissionIds;
+    public String getDescription() {
+        return description;
     }
 
-    public void setPermissionIds(List<Long> permissionIds) {
-        this.permissionIds = permissionIds;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public List<Long> getIdPermissions() {
+        return idPermissions;
+    }
+
+    public void setIdPermissions(List<Long> idPermissions) {
+        this.idPermissions = idPermissions;
     }
 
     @Override
     public String toString() {
         return "RoleDTO{" +
-                "id=" + id +
-                ", name=" + name +
-                ", permissionIds=" + permissionIds +
+                "idRole=" + idRole +
+                ", nomRole=" + nomRole +
+                ", description=" + description +
+                ", idPermissions=" + idPermissions +
                 "}";
     }
 }

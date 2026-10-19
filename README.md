@@ -1,18 +1,25 @@
 # Fin Manager
 
-Projet Java (Maven) de gestion financière.
+Projet Java (Maven). Les modèles suivent le diagramme de classe du devoir.
 
 ## Structure
 
 ```
 src/main/java/com/finmanager/
-├── App.java            démonstration
-├── entities/           modèles (conformes au diagramme de classe)
-│   ├── User, Account, Transaction, Role, Permission, Loan, Notification
-│   └── AccountType, TransactionType, LoanStatus   (enums)
-└── dto/                un DTO par entité
-    └── UserDTO, AccountDTO, TransactionDTO, RoleDTO, PermissionDTO, LoanDTO, NotificationDTO
+├── App.java        démonstration
+├── entities/       User, Compte, Transaction, Notification, Role, Permission, Credit, Agence
+└── dto/            UserDTO, CompteDTO, TransactionDTO, NotificationDTO, RoleDTO, PermissionDTO, CreditDTO, AgenceDTO
 ```
+
+## Relations (diagramme)
+
+- User 1 — * Compte
+- Compte 1 — * Transaction
+- Compte 1 — * Credit
+- Agence 1 — 1..* Compte
+- Transaction 0..1 — 1 Notification
+- User * — 1..* Role
+- Role * — * Permission
 
 ## Lancer
 
