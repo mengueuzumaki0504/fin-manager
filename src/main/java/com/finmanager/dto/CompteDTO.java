@@ -3,9 +3,6 @@ package com.finmanager.dto;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-/**
- * Objet de transfert de données pour Compte.
- */
 public class CompteDTO {
 
     private String numCompte;
