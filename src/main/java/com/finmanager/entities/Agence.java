@@ -3,9 +3,6 @@ package com.finmanager.entities;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Agence qui gère des comptes (table Agence).
- */
 public class Agence {
 
     private String numAg;
