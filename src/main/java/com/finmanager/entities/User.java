@@ -4,9 +4,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Utilisateur de l'application (table User).
- */
 public class User {
 
     private Long idUser;
