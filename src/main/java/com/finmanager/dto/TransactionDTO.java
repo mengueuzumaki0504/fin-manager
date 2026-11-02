@@ -3,9 +3,7 @@ package com.finmanager.dto;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-/**
- * Objet de transfert de données pour Transaction.
- */
+
 public class TransactionDTO {
 
     private String numTransac;
