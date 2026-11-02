@@ -3,9 +3,6 @@ package com.finmanager.entities;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Droit accordé à un ou plusieurs rôles (table permissions).
- */
 public class Permission {
 
     private Long idPer;
