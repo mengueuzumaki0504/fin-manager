@@ -1,8 +1,6 @@
 package com.finmanager.dto;
 
-/**
- * Objet de transfert de données pour Permission.
- */
+
 public class PermissionDTO {
 
     private Long idPer;
