@@ -2,9 +2,6 @@ package com.finmanager.entities;
 
 import java.time.LocalDateTime;
 
-/**
- * Notification liée à une transaction (table Notifications).
- */
 public class Notification {
 
     private Long idNotification;
