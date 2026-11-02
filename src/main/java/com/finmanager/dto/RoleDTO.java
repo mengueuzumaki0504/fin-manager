@@ -3,9 +3,7 @@ package com.finmanager.dto;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Objet de transfert de données pour Role.
- */
+
 public class RoleDTO {
 
     private Long idRole;
