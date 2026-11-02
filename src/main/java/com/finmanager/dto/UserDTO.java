@@ -4,9 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Objet de transfert de données pour User.
- */
+
 public class UserDTO {
 
     private Long idUser;
