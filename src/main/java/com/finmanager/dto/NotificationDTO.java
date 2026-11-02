@@ -2,9 +2,6 @@ package com.finmanager.dto;
 
 import java.time.LocalDateTime;
 
-/**
- * Objet de transfert de données pour Notification.
- */
 public class NotificationDTO {
 
     private Long idNotification;
