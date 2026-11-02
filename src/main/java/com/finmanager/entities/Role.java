@@ -3,9 +3,6 @@ package com.finmanager.entities;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Rôle d'un utilisateur, regroupant des permissions (table Roles).
- */
 public class Role {
 
     private Long idRole;
