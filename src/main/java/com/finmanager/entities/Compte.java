@@ -5,9 +5,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Compte bancaire d'un utilisateur, rattaché à une agence (table Comptes).
- */
 public class Compte {
 
     private String numCompte;
