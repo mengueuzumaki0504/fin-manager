@@ -3,9 +3,6 @@ package com.finmanager.entities;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-/**
- * Crédit accordé sur un compte (table Crédit).
- */
 public class Credit {
 
     private Long idCredit;
