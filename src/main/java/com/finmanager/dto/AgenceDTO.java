@@ -1,8 +1,5 @@
 package com.finmanager.dto;
 
-/**
- * Objet de transfert de données pour Agence.
- */
 public class AgenceDTO {
 
     private String numAg;
