@@ -3,9 +3,6 @@ package com.finmanager.entities;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-/**
- * Opération effectuée sur un compte (table transaction).
- */
 public class Transaction {
 
     private String numTransac;
